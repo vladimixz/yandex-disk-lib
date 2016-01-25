@@ -1,11 +1,5 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 class YandexDisc extends CApplicationComponent
 {
     
@@ -17,7 +11,7 @@ class YandexDisc extends CApplicationComponent
 
 
     /**
-     * Получаем токен. Если токен сохранен берем его из файла, если нет тогда получаем через Oauth.
+     * Get token from file or API and save it
      * @return type
      */
     public function getToken()
@@ -43,7 +37,7 @@ class YandexDisc extends CApplicationComponent
     }
     
     /**
-     * Запрос на получение токена
+     * Request for getting token
      * @return type
      */
     public function tokenRequest()
@@ -71,7 +65,7 @@ class YandexDisc extends CApplicationComponent
     }
     
     /**
-     * Проверка данных сохраненных во временном файле
+     * Varify data in tmp file
      * @param type $last_query
      * @return type
      */
@@ -89,7 +83,7 @@ class YandexDisc extends CApplicationComponent
     }
     
     /**
-     * Создаем временный файл для хранения токена
+     * Create tmp file for saving token
      * @param type $content
      */
     public function createTmpFile($content)
@@ -106,7 +100,7 @@ class YandexDisc extends CApplicationComponent
     }
 
     /**
-     * Получаем список файлов по заданному пути
+     * Get files by path
      * @param type $path
      * @return type
      */
@@ -129,7 +123,7 @@ class YandexDisc extends CApplicationComponent
     }
     
     /**
-     * Выбираем из файлов список невалидных ШК
+     * Get files with invalid gtin
      * @param type $path
      * @return type
      */
@@ -157,7 +151,7 @@ class YandexDisc extends CApplicationComponent
     }
     
     /**
-     * Удаляем строку поиска из временного файла
+     * Delete query from tmp file
      */
     public function unsetLastQuery()
     {
@@ -171,7 +165,7 @@ class YandexDisc extends CApplicationComponent
     }
     
     /**
-     * Запрос на получение кода авторизации
+     * Query for oauth code
      * @param type $last_query
      */
     public function oauthQuery($last_query)
