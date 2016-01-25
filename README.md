@@ -1,6 +1,6 @@
 # Yandex disc library for yii
 Add to config file
-'YandexDisc' => array(
+`'YandexDisc' => array(
     'yandexId' => '',
-    'yandexKey' => '',
-),
+    'yandexKey' => ''
+),`
